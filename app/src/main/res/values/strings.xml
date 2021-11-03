@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeekThreeTask</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="Search"> Search</string>
+    <string name="naanalong">Naanalong</string>
+    <string name="address">Jos-South, PL</string>
+    <string name="follow">FOLLOW NAANALONG</string>
+    <string name="message">MESSAGE</string>
+    <string name="see">SEE MORE</string>
+    <string name="dark">Enable Dark Mode</string>
+    <string name="light">Enable Light Mode</string>
+</resources>

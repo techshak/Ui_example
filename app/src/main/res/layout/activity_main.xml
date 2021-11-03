@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+<!-- The scroll View to house all scrollable elements-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:padding="10dp"
+        android:scrollbars="none" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+   <!-- The profile picture card view-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="250dp"
+                android:layout_marginTop="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_img" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/naanalong"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="?attr/color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <TextView
+                android:id="@+id/address_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/address"
+                android:textColor="?attr/color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <Button
+                android:id="@+id/follow_button"
+                android:text="@string/follow"
+                style="@style/CustomButtonTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_view" />
+
+            <Button
+                android:id="@+id/message_button"
+                android:text="@string/message"
+                style="@style/CustomButtonTheme2"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/follow_button" />
+
+            <!-- The Linear layout housing the topmost row of pictures-->
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/message_button"
+                tools:context=".MainActivity">
+
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:paddingEnd="5dp"
+                    app:srcCompat="@drawable/img1" />
+
+                <ImageView
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:paddingStart="2.5dp"
+                    android:paddingEnd="2.5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img4" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:paddingStart="5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img3" />
+            </LinearLayout>
+
+            <!-- The Linear layout housing the middle row of pictures-->
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+                tools:context=".MainActivity">
+
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:paddingEnd="5dp"
+                    app:srcCompat="@drawable/img4" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:paddingStart="2.5dp"
+                    android:paddingEnd="2.5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img5" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:paddingStart="5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img6" />
+            </LinearLayout>
+
+            <!-- The Linear layout housing the bottom row of pictures-->
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:context=".MainActivity">
+
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:paddingEnd="5dp"
+                    app:srcCompat="@drawable/img7" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:paddingStart="2.5dp"
+                    android:paddingEnd="2.5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img10" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:layout_weight="1"
+                    android:paddingStart="5dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img8" />
+            </LinearLayout>
+
+            <!-- The white see more button -->
+            <Button
+                android:id="@+id/see_button"
+                style="@style/CustomButtonTheme2"
+                android:text="@string/see"
+                android:layout_height="52dp"
+                android:layout_width="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <Switch
+                android:id="@+id/toggle_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--The constraint layout to keep the search and name bar in place -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- The Linear layout housing the greeting, heart and menu -->
+        <LinearLayout
+            android:id="@+id/name_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.12"
+                android:fontFamily="@font/comfortaa"
+                android:text="@string/good_morning"
+                android:textAlignment="viewStart"
+                android:textColor="?attr/color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_weight="2.6"
+                android:drawableStart="@drawable/heart_a" />
+
+            <ImageView
+                android:layout_width="11.8dp"
+                android:layout_height="22dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+        <!-- The Search bar-->
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_bar">
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                app:queryBackground="@null"
+                android:layout_height="wrap_content"
+                app:queryHint="@string/Search"
+                app:iconifiedByDefault="false"
+                style="@style/SearchView"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
